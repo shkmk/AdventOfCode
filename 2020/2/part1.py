@@ -9,6 +9,5 @@ def main():
     print(n_correct)
 
 
-
 if __name__ == '__main__':
     main()

@@ -1,6 +1,7 @@
 from functools import reduce
 from operator import mul
 
+
 def main():
     o = set()
     with open('in') as f:
