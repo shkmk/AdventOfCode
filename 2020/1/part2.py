@@ -3,7 +3,7 @@ from operator import mul
 
 def main():
     o = set()
-    with open('main.in') as f:
+    with open('in') as f:
         n = set(map(int, f.readlines()))
         for d in n:
             n_inv = set(2020 - (d + i) for i in n)
