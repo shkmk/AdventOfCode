@@ -1,19 +1,10 @@
 from functools import reduce
+from itertools import combinations
 from operator import mul
 
 
 def main():
-    o = set()
-    with open('in') as f:
-        n = set(map(int, f.readlines()))
-        for d in n:
-            n_inv = set(2020 - (d + i) for i in n)
-            f = n.intersection(n_inv)
-            if not f:
-                continue
-            s = 2020 - sum(f)
-            o.add(s)
-    print(reduce(mul, o))
+    print(reduce(mul, (x := next(filter(lambda x: 2020 - sum(x) in n, combinations((n := set(map(int, (f := open('in')).read().split()))),2))))) * (2020 - sum(x))) or f.close()
 
 
 if __name__ == '__main__':
